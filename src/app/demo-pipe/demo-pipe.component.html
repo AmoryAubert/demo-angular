@@ -1,0 +1,11 @@
+<h1>Demo Pipes</h1>
+<p>Uppercase: {{ message | uppercase }}</p>
+<p>Lowercase: {{ message | lowercase }}</p>
+<p>Titlecase: {{ message | titlecase }}</p>
+<p>Date du jour: {{ ajd }}</p>
+<p>Date du jour: {{ ajd | date: 'd-MM-yyyy' }}</p>
+<p>Prix: {{ price | currency:'EUR':'symbol':undefined:'fr-FR' }}</p>
+<h2>Custom Pipes</h2>
+<p>{{ 50 | demoPipe }}</p>
+<p>{{ 0 | temperature:'c' }}</p>
+<p>{{ 0 | temperature:'f' }}</p>

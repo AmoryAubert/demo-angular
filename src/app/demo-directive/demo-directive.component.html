@@ -1,0 +1,25 @@
+<h3>Structural Directives</h3>
+
+<h5>NgIf</h5>
+<button (click)="isOpen = !isOpen">Spoil</button>
+<p *ngIf="isOpen">Lorem ipsum dolor sit amet.</p>
+
+<h5>NgFor</h5>
+<ul>
+    <li *ngFor="let name of listName; index as i; odd as isOdd" [ngClass]="{'odd': isOdd}">
+        {{i}} - {{name}} - {{isOdd ? 'impair' : 'pair'}}
+    </li>
+</ul>
+
+<h5>NgSwitch</h5>
+<input [(ngModel)]="choice">
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="1">{{listName[0]}}</div>
+    <div *ngSwitchCase="2">{{listName[1]}}</div>
+    <div *ngSwitchCase="3">{{listName[2]}}</div>
+    <div *ngSwitchCase="4">{{listName[3]}}</div>
+    <div *ngSwitchCase="">{{listName[0]}}</div>
+</div>
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="1">{{listName[0]}}</div>
+</div>
