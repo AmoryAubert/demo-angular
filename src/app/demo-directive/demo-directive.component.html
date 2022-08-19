@@ -18,8 +18,17 @@
     <div *ngSwitchCase="2">{{listName[1]}}</div>
     <div *ngSwitchCase="3">{{listName[2]}}</div>
     <div *ngSwitchCase="4">{{listName[3]}}</div>
-    <div *ngSwitchCase="">{{listName[0]}}</div>
+    <div *ngSwitchDefault>Entrez 1, 2 ou 3</div>
 </div>
-<div [ngSwitch]="choice">
-    <div *ngSwitchCase="1">{{listName[0]}}</div>
+
+<div>
+    <h5>
+        custom directives
+    </h5>
+    <p>
+        Lorem ipsum dolor sit amet <span highlight>consectetur</span> adipisicing elit. 
+        Tenetur modi est facere, fugiat iusto molestiae quo vero 
+        <span highlight>corrupti</span> eos provident placeat fuga <span highlight>consequuntur</span> dolorum 
+        dignissimos magnam <span highlight>blanditiis</span> tempore dolores officiis.
+    </p>
 </div>

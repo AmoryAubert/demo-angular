@@ -17,6 +17,7 @@ import { ChronoComponent } from './chrono/chrono.component';
 import { ChronoPipe } from './pipes/chrono.pipe';
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './custom-directives/highlight.directive';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -32,6 +33,7 @@ registerLocaleData(localeFr);
     ChronoComponent,
     ChronoPipe,
     DemoDirectiveComponent,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
