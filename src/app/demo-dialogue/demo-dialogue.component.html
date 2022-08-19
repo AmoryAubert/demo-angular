@@ -1,0 +1,6 @@
+<div style="border : 1px solid red; margin-top : 5px; padding : 1%">
+    <h2>Bonjour je suis le component parent et je m'apelle {{prenomParent}}</h2>
+    <p>{{messageDeFiston}}</p>
+    <app-enfant-dialogue (direBonjour)="recevoirBonjour($event)" [prenomPapa]="prenomParent" prenomMaman="Albertine">
+    </app-enfant-dialogue>
+</div>

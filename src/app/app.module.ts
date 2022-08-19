@@ -18,6 +18,10 @@ import { ChronoPipe } from './pipes/chrono.pipe';
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './custom-directives/highlight.directive';
+import { CoursComponent } from './exo-directives/cours/cours.component';
+import { DemoDialogueComponent } from './demo-dialogue/demo-dialogue.component';
+import { EnfantDialogueComponent } from './demo-dialogue/enfant-dialogue/enfant-dialogue.component';
+import { ExoDialogueComponent } from './exo-dialogue/exo-dialogue.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -34,6 +38,10 @@ registerLocaleData(localeFr);
     ChronoPipe,
     DemoDirectiveComponent,
     HighlightDirective,
+    CoursComponent,
+    DemoDialogueComponent,
+    EnfantDialogueComponent,
+    ExoDialogueComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],

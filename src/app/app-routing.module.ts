@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ChronoComponent } from './chrono/chrono.component';
 import { ContactComponent } from './contact/contact.component';
+import { DemoDialogueComponent } from './demo-dialogue/demo-dialogue.component';
 import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
+import { CoursComponent } from './exo-directives/cours/cours.component';
 import { WhoComponent } from './who/who.component';
 
 const routes: Routes = [
@@ -15,6 +17,8 @@ const routes: Routes = [
   },
   { path: 'demopipe', component: DemoPipeComponent },
   { path: 'chrono', component: ChronoComponent },
+  { path: 'exo-directives/cours', component: CoursComponent },
+  {path: 'demodialogue', component:DemoDialogueComponent}
 ];
 
 @NgModule({
