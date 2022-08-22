@@ -1,1 +1,37 @@
-<p>shopping works!</p>
+<div>
+    <p>
+        <label for="nomArticle">Nom:</label>
+        <input type="text" name="nomArticle" id="nomArticle" [(ngModel)]="newArticle">
+    </p>
+    <p>
+        <label for="prixArticle">Prix:</label>
+        <input type="number" name="prixArticle" id="prixArticle" min="0" #unitPrice>
+    </p>
+    <p>
+        <label for="promoArticle">promo:</label>
+        <select #isPromo>
+            <option value="0">Pas en promo</option>
+            <option value="1">En promo</option>
+        </select>
+    </p>
+    <button (click)="ajouterArticle(unitPrice.value,isPromo.value)" >Add</button>
+</div>
+
+<div>
+    <h3>liste d'articles</h3>
+    <ul>
+        <li *ngFor="let article of articles">
+            <div id="liste">
+                <span class='nameArt' [ngStyle]="{'color': article.isPromo ? 'green' : ''}">
+                    {{ article.name }}
+                </span> 
+                <span class='priceArt'> {{ article.unitPrice }}€ </span>
+                <span class='quantityArt'> Nb: {{ article.quantity }} </span>
+            </div>
+            <button (click)="plusArticle(article.id,article.quantity)">[+]</button>
+            <button (click)="moinsArticle(article.id,article.quantity)">[-]</button>
+            <button (click)="supprimerArticle(article.id)">[X]</button>
+        </li>
+        <li>total: {{ afficherTotal() | currency:'EUR':'symbol':undefined:'fr-FR' }}</li>
+    </ul>
+</div>

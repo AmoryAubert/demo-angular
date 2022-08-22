@@ -1,0 +1,30 @@
+input{
+    margin-left: 1rem;
+}
+li:last-child {
+    list-style: none;
+    font-size: 2rem;
+    margin-left: 3rem;
+    padding: 0;
+}
+h3{
+    margin-left: 6rem;
+    text-decoration: underline dotted #000 2px;
+}
+#liste{
+        display: inline-block;
+        border-bottom: solid 1px #000;
+        margin-bottom: 1rem;
+    .nameArt{
+        display: inline-block;
+        width: 4.5rem !important;
+    }
+    .priceArt{
+        display: inline-block;
+        width: 4rem !important;
+    }
+    .quantityArt{
+        display: inline-block;
+        width: 4rem !important;
+    }
+}

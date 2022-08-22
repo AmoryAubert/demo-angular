@@ -1,4 +1,6 @@
-<div id="line" *ngFor="let name of cours; index as i;">
-    <div (click)="name.isActive = !name.isActive">{{name.title}}</div>
-    <div *ngIf="name.isActive">{{name.description}}</div>
+<div id="lescours">
+    <div id="line" *ngFor="let name of cours; index as i;">
+        <div (click)="name.isActive = !name.isActive">{{name.title}}</div>
+        <div *ngIf="name.isActive">{{name.description}}</div>
+    </div>
 </div>

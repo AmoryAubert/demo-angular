@@ -17,7 +17,6 @@ export class HelloAngularComponent implements OnInit {
     do {
       n = randomize(0, fName.length);
     } while (this.name == fName[n]);
-    console.log(title);
     this.name = fName[n];
   }
 }
