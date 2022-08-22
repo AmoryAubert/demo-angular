@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { nanoid } from 'nanoid';
 import { ShoppingService } from '../services/shopping.service';
 import { Article } from '../types';
@@ -12,29 +12,20 @@ import { Article } from '../types';
 export class ShoppingComponent implements OnInit {
   articles: Article[] = [];
   newArticle: string = '';
+  myFormGroup!: FormGroup;
 
-  constructor(private _shoppingService: ShoppingService) {}
+  constructor(
+    private _shoppingService: ShoppingService,
+    private _formBuilder: FormBuilder
+  ) {}
 
   ngOnInit(): void {
     this.articles = this._shoppingService.Afficher();
   }
 
-  ajouterArticle(unitPrice: string, isPromo: string): void {
-    console.log(isPromo);
+  ajouterArticle(unitPrice: string, isPromo: boolean): void {
     let uPrice: number = parseInt(unitPrice, 10);
-    let promo: boolean;
-    switch (isPromo) {
-      case '0':
-        promo = false;
-        break;
-      case '1':
-        promo = true;
-        break;
-      default:
-        promo = false;
-        break;
-    }
-    this._shoppingService.ajouter(this.newArticle, uPrice, promo);
+    this._shoppingService.ajouter(this.newArticle, uPrice, isPromo);
   }
 
   supprimerArticle(id: string): void {

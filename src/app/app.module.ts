@@ -16,7 +16,7 @@ import { TemperaturePipe } from './pipes/temperature.pipe';
 import { ChronoComponent } from './chrono/chrono.component';
 import { ChronoPipe } from './pipes/chrono.pipe';
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './custom-directives/highlight.directive';
 import { CoursComponent } from './exo-directives/cours/cours.component';
 import { DemoDialogueComponent } from './demo-dialogue/demo-dialogue.component';
@@ -47,7 +47,7 @@ registerLocaleData(localeFr);
     ListeComponent,
     ShoppingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],
 })

@@ -9,12 +9,9 @@
     </p>
     <p>
         <label for="promoArticle">promo:</label>
-        <select #isPromo>
-            <option value="0">Pas en promo</option>
-            <option value="1">En promo</option>
-        </select>
+        <input type="checkbox" name="promoArticle" id="promoArticle" #isPromo>
     </p>
-    <button (click)="ajouterArticle(unitPrice.value,isPromo.value)" >Add</button>
+    <button (click)="ajouterArticle(unitPrice.value,isPromo.checked)">Add</button>
 </div>
 
 <div>
