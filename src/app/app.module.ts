@@ -22,6 +22,8 @@ import { CoursComponent } from './exo-directives/cours/cours.component';
 import { DemoDialogueComponent } from './demo-dialogue/demo-dialogue.component';
 import { EnfantDialogueComponent } from './demo-dialogue/enfant-dialogue/enfant-dialogue.component';
 import { ExoDialogueComponent } from './exo-dialogue/exo-dialogue.component';
+import { ListeComponent } from './exo-dialogue/liste/liste.component';
+import { ShoppingComponent } from './shopping/shopping.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -42,6 +44,8 @@ registerLocaleData(localeFr);
     DemoDialogueComponent,
     EnfantDialogueComponent,
     ExoDialogueComponent,
+    ListeComponent,
+    ShoppingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],

@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DemoDialogueComponent } from './demo-dialogue/demo-dialogue.component';
 import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
 import { CoursComponent } from './exo-directives/cours/cours.component';
+import { ShoppingComponent } from './shopping/shopping.component';
 import { WhoComponent } from './who/who.component';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'demopipe', component: DemoPipeComponent },
   { path: 'chrono', component: ChronoComponent },
   { path: 'exo-directives/cours', component: CoursComponent },
-  {path: 'demodialogue', component:DemoDialogueComponent}
+  { path: 'demodialogue', component: DemoDialogueComponent },
+  { path: 'shopping', component: ShoppingComponent },
 ];
 
 @NgModule({

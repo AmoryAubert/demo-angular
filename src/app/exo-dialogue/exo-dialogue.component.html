@@ -1,1 +1,4 @@
-<p>exo-dialogue works!</p>
+<h3>Exercice liste de shopping</h3>
+<input [(ngModel)]="article" type="text">
+<button (click)="ajouter(article)">Ajouter</button>
+<app-liste [listeArticle]="itemList" (supprimer)=toDelete($event)></app-liste>
