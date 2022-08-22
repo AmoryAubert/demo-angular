@@ -24,7 +24,7 @@ export class ShoppingComponent implements OnInit {
   }
 
   ajouterArticle(unitPrice: string, isPromo: boolean): void {
-    let uPrice: number = parseInt(unitPrice, 10);
+    let uPrice: number = parseFloat(unitPrice);
     this._shoppingService.ajouter(this.newArticle, uPrice, isPromo);
   }
 
