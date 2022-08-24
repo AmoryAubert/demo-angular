@@ -17,7 +17,10 @@ export class ReactiveFormComponent implements OnInit {
   newsletter: FormControl = new FormControl('Hello@msn.com');
 
   subscriptionForm: FormGroup = new FormGroup({
-    firstname: new FormControl('', MinLengthValidator(3)),
+    firstname: new FormControl(
+      '',
+      MinLengthValidator(3, "C'est raté, essaies encore !")
+    ),
     birthdate: new FormControl(''),
     address: new FormGroup({
       street: new FormControl(''),

@@ -1,6 +1,9 @@
 import { AbstractControl } from '@angular/forms';
 
-export const MinLengthValidator = (length: number) => {
+export const MinLengthValidator = (
+  length: number,
+  message: string = 'string too short'
+) => {
   return (control: AbstractControl) => {
     const value: string = control.value;
 
@@ -9,7 +12,7 @@ export const MinLengthValidator = (length: number) => {
     }
 
     if (value.length < length) {
-      return { min: 'string too short !' };
+      return { min: message };
     }
     return null;
   };
