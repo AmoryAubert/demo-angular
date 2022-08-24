@@ -10,7 +10,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 const routes: Routes = [
   { path: 'demo-dialogue', component: DemoDialogueComponent },
   { path: 'demo-directive', component: DemoDirectiveComponent },
-  { path: 'Hello', component: HelloAngularComponent },
+  { path: 'hello', component: HelloAngularComponent },
   { path: 'demo-pipe', component: DemoPipeComponent },
   { path: 'form', component: ReactiveFormComponent },
   { path: 'custom-directive', component: HighlightDirective },

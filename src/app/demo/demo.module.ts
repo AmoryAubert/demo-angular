@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+//import { RouterModule, Routes } from '@angular/router';
 
 import { DemoRoutingModule } from './demo-routing.module';
 import { HighlightDirective } from './custom-directives/highlight.directive';
@@ -12,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnfantDialogueComponent } from './demo-dialogue/enfant-dialogue/enfant-dialogue.component';
 import { TemperaturePipe } from '../pipes/temperature.pipe';
 import { DemoPipePipe } from '../pipes/demo-pipe.pipe';
+
+//const demosRoutes: Routes = [{ path: 'hello' }];
 
 @NgModule({
   declarations: [
