@@ -6,6 +6,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { MinLengthValidator } from '../validators/MinLengthValidator';
 
 @Component({
   selector: 'app-reactive-form',
@@ -16,7 +17,7 @@ export class ReactiveFormComponent implements OnInit {
   newsletter: FormControl = new FormControl('Hello@msn.com');
 
   subscriptionForm: FormGroup = new FormGroup({
-    firstname: new FormControl('', Validators.required),
+    firstname: new FormControl('', MinLengthValidator(3)),
     birthdate: new FormControl(''),
     address: new FormGroup({
       street: new FormControl(''),
