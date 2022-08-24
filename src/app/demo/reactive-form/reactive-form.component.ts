@@ -6,7 +6,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { MinLengthValidator } from '../validators/MinLengthValidator';
+import { MinLengthValidator } from '../../validators/MinLengthValidator';
 
 @Component({
   selector: 'app-reactive-form',

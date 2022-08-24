@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { nanoid } from 'nanoid';
-import { ShoppingService } from '../services/shopping.service';
-import { Article } from '../types';
+import { ShoppingService } from 'src/app/services/shopping.service';
+import { Article } from 'src/app/types';
 
 @Component({
   selector: 'app-shopping',
