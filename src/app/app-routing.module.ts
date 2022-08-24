@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DemoDialogueComponent } from './demo-dialogue/demo-dialogue.component';
 import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
 import { CoursComponent } from './exo-directives/cours/cours.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { WhoComponent } from './who/who.component';
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'exo-directives/cours', component: CoursComponent },
   { path: 'demodialogue', component: DemoDialogueComponent },
   { path: 'shopping', component: ShoppingComponent },
+  { path: 'reactive-form', component: ReactiveFormComponent },
 ];
 
 @NgModule({

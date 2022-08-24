@@ -24,6 +24,8 @@ import { EnfantDialogueComponent } from './demo-dialogue/enfant-dialogue/enfant-
 import { ExoDialogueComponent } from './exo-dialogue/exo-dialogue.component';
 import { ListeComponent } from './exo-dialogue/liste/liste.component';
 import { ShoppingComponent } from './shopping/shopping.component';
+import { ExoContactFormComponent } from './exo-contact-form/exo-contact-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -46,6 +48,8 @@ registerLocaleData(localeFr);
     ExoDialogueComponent,
     ListeComponent,
     ShoppingComponent,
+    ExoContactFormComponent,
+    ReactiveFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],

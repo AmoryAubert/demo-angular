@@ -1,0 +1,56 @@
+<h1>Form Demo</h1>
+<h3>Form Control</h3>
+<div>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" [formControl]="newsletter">
+    <button (click)="newsletter.markAsUntouched()">Untouched</button>
+</div>
+<p>{{ newsletter.value }}</p>
+<h3>Form Group</h3>
+<form [formGroup]="subscriptionForm" (ngSubmit)="handleSubmit()">
+    <div>
+        <label for="first-name">Nom:</label>
+        <input type="text" id="first-name" formControlName="firstname">
+    </div>
+    <div>
+        <label for="birth-date">Date de naissance:</label>
+        <input id="birth-date" type="date" formControlName="birthdate">
+    </div>
+    <div formGroupName="address">
+        <h4>Adresse:</h4>
+        <div>
+            <label for="street">Rue:</label>
+            <input id="street" type="text" formControlName="street">
+        </div>
+        <div>
+            <label for="zip-code">Code postal:</label>
+            <input id="zip-code" type="number" formControlName="zip">
+        </div>
+    </div>
+    <button type="submit" [disabled]="!subscriptionForm.valid">Envoyer</button>
+</form>
+
+{{ subscriptionForm.value | json }}
+
+<h3>Form Builder</h3>
+
+<form [formGroup]="artistProfile">
+    <div>
+        <label for="name">Nom:</label>
+        <input id="name" type="text" formControlName="name">
+        <p *ngIf="hasError(artistProfile, 'name', 'required')">Required Name</p>
+        <p *ngIf="hasError(artistProfile, 'name', 'minlength')">Name too short</p>
+    </div>
+    <div formArrayName="genres">
+        <h2>Genres:</h2>
+        <button type="button" (click)="addGenres()">[+]</button>
+        <div *ngFor="let genre of genres.controls; let i=index">
+            <label for="genre-{{i}}">Type:</label>
+            <input type="text" id="genre-{{i}}" [formControlName]="i">
+            <button (click)="removeGenres(i)">[-]</button>
+        </div>
+    </div>
+    <button type="submit" [disabled]="!artistProfile.valid">Envoyer</button>
+</form>
+
+{{ artistProfile.value | json}}
