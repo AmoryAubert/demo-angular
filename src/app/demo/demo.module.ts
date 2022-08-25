@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnfantDialogueComponent } from './demo-dialogue/enfant-dialogue/enfant-dialogue.component';
 import { TemperaturePipe } from '../pipes/temperature.pipe';
 import { DemoPipePipe } from '../pipes/demo-pipe.pipe';
+import { DemoParamsComponent } from './demo-params/demo-params.component';
+import { UsersComponent } from './demo-params/users/users.component';
 
 //const demosRoutes: Routes = [{ path: 'hello' }];
 
@@ -27,6 +29,8 @@ import { DemoPipePipe } from '../pipes/demo-pipe.pipe';
     HighlightDirective,
     TemperaturePipe,
     DemoPipePipe,
+    DemoParamsComponent,
+    UsersComponent,
   ],
   imports: [CommonModule, DemoRoutingModule, FormsModule, ReactiveFormsModule],
 })

@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { NavComponent } from './nav/nav.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
 registerLocaleData(localeFr);
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavComponent, NotFoundComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],

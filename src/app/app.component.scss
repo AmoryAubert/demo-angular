@@ -1,11 +1,12 @@
+$nav_width:700px;
 #menu_horizontal {
     z-index: 1;
     border: 1px solid #21265a;
-    width: 1238px;
+    width: $nav_width;
     height: 50px;
     position: absolute;
     left: 50%;
-    margin-left: -620px;
+    margin-left: -(($nav_width+2)/2);
     background: #00618a;
     /* Old browsers */
     background: -moz-linear-gradient(top, #00618a 0%, #002b3f 50%, #00618a 100%);
@@ -18,41 +19,6 @@
     /* IE6-9 */
     border-radius: 0px 0px 9px 9px;
 }
-
-#menu_horizontal ul {
-    margin: 0;
-}
-
-#menu_horizontal li {
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 1rem;
-}
-
-#menu_horizontal a:hover {
-    background: #0089bf;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #0089bf 0%, #00577f 50%, #0089bf 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #0089bf 0%, #00577f 50%, #0089bf 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #0089bf 0%, #00577f 50%, #0089bf 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0089bf', endColorstr='#0089bf', GradientType=0);
-    /* IE6-9 */
-}
-
-#menu_horizontal a {
-    padding: 0 62px 0 62px;
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-}
-
 #main {
     position: absolute;
     padding: 50px 100px;

@@ -1,0 +1,11 @@
+<ul id="top">
+    <li *ngFor="let link of linkList; index as i">
+        <a *ngIf="link.title=='Home'" routerLink="{{link.url}}">{{link.title}}</a>
+        <a  *ngIf="link.title!='Home'" (click)="linkList[i].isVisible = !linkList[i].isVisible">{{link.title}}</a>
+        <ul id="dropdown" *ngIf="linkList[i].isVisible && link.children?.length !== 0">
+            <li *ngFor="let li of link.children" >
+                <a routerLink="{{li.url}}" (click)="linkList[i].isVisible = !linkList[i].isVisible">{{li.title}}</a> 
+            </li>
+        </ul>
+    </li>
+</ul>
