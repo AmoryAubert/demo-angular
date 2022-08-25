@@ -1,11 +1,11 @@
 #menu_horizontal {
     z-index: 1;
     border: 1px solid #21265a;
-    width: 958px;
+    width: 1238px;
     height: 50px;
     position: absolute;
     left: 50%;
-    margin-left: -480px;
+    margin-left: -620px;
     background: #00618a;
     /* Old browsers */
     background: -moz-linear-gradient(top, #00618a 0%, #002b3f 50%, #00618a 100%);
@@ -27,6 +27,7 @@
     display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
+    margin: 0 1rem;
 }
 
 #menu_horizontal a:hover {
