@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HighlightDirective } from './custom-directives/highlight.directive';
 import { DemoDialogueComponent } from './demo-dialogue/demo-dialogue.component';
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
+import { DemoHttpComponent } from './demo-http/demo-http.component';
+import { UserDetailComponent } from './demo-http/user-detail/user-detail.component';
 import { DemoParamsComponent } from './demo-params/demo-params.component';
 import { UsersComponent } from './demo-params/users/users.component';
 import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
@@ -20,6 +22,11 @@ const routes: Routes = [
     path: 'params',
     component: DemoParamsComponent,
     children: [{ path: ':id', component: UsersComponent }],
+  },
+  {
+    path: 'demo-http',
+    component: DemoHttpComponent,
+    children: [{ path: ':id', component: UserDetailComponent }],
   },
 ];
 

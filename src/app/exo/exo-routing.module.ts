@@ -4,6 +4,7 @@ import { ChronoComponent } from './chrono/chrono.component';
 import { ExoContactFormComponent } from './exo-contact-form/exo-contact-form.component';
 import { ExoDialogueComponent } from './exo-dialogue/exo-dialogue.component';
 import { CoursComponent } from './exo-directives/cours/cours.component';
+import { LoginComponent } from './login/login.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'exo-dialogue', component: ExoDialogueComponent },
   { path: 'shopping', component: ShoppingComponent },
   { path: 'cours', component: CoursComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

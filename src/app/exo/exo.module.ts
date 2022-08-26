@@ -9,6 +9,7 @@ import { CoursComponent } from './exo-directives/cours/cours.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListeComponent } from './exo-dialogue/liste/liste.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ListeComponent } from './exo-dialogue/liste/liste.component';
     ListeComponent,
     CoursComponent,
     ShoppingComponent,
+    LoginComponent,
   ],
   imports: [CommonModule, ExoRoutingModule, FormsModule, ReactiveFormsModule],
 })

@@ -15,6 +15,8 @@ import { TemperaturePipe } from '../pipes/temperature.pipe';
 import { DemoPipePipe } from '../pipes/demo-pipe.pipe';
 import { DemoParamsComponent } from './demo-params/demo-params.component';
 import { UsersComponent } from './demo-params/users/users.component';
+import { DemoHttpComponent } from './demo-http/demo-http.component';
+import { UserDetailComponent } from './demo-http/user-detail/user-detail.component';
 
 //const demosRoutes: Routes = [{ path: 'hello' }];
 
@@ -31,6 +33,8 @@ import { UsersComponent } from './demo-params/users/users.component';
     DemoPipePipe,
     DemoParamsComponent,
     UsersComponent,
+    DemoHttpComponent,
+    UserDetailComponent,
   ],
   imports: [CommonModule, DemoRoutingModule, FormsModule, ReactiveFormsModule],
 })

@@ -46,6 +46,10 @@ export class NavComponent implements OnInit {
             title: 'params',
             url: '/demos/params',
           },
+          {
+            title: 'demo http',
+            url: '/demos/demo-http',
+          },
         ],
       },
       {
@@ -70,6 +74,10 @@ export class NavComponent implements OnInit {
           {
             title: 'Cours List',
             url: '/exos/cours',
+          },
+          {
+            title: 'Login',
+            url: 'exos/login',
           },
         ],
       },

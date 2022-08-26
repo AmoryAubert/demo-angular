@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { UsersService } from '../services/users.service';
 
@@ -8,31 +9,34 @@ import { UsersService } from '../services/users.service';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent implements OnInit, OnDestroy {
   user!: User;
   param!: string;
+  subscription!: Subscription;
+
   constructor(
     private userService: UsersService,
     private _activatedRoute: ActivatedRoute,
     private _router: Router
-  ) {
-    this._router.events.subscribe({
-      next: (event) => {
-        if (event instanceof NavigationEnd) {
-          this.param = this._activatedRoute.snapshot.params['id'];
-          if (this.param) {
-            const user = this.userService.getUser(parseInt(this.param));
-            if (user) {
-              this.user = user;
-            } else {
-              this._router.navigate(['demos/params']);
-            }
+  ) {}
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+  ngOnInit(): void {
+    this.subscription = this._activatedRoute.params.subscribe({
+      next: ({ id }) => {
+        if (id) {
+          const user = this.userService.getUser(parseInt(id));
+          if (user) {
+            this.user = user;
           } else {
             this._router.navigate(['demos/params']);
           }
+        } else {
+          this._router.navigate(['demos/params']);
         }
       },
     });
   }
-  ngOnInit(): void {}
 }

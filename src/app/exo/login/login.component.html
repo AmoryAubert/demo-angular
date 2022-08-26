@@ -1,0 +1,16 @@
+<div *ngIf="!connectedUser">
+    <div>
+        <label for="login">Login</label>
+        <input id="login" type="text" [(ngModel)]="login">
+    </div>
+    <div>
+        <label for="pwd">Mot de passe</label>
+        <input id="pwd" type="text" [(ngModel)]="pwd">
+    </div>
+    <div><button (click)="connection()">Se connecter</button></div>
+</div>
+
+<div *ngIf="connectedUser">
+    <p>Bienvenue {{connectedUser.firstname}} {{connectedUser.lastname}}</p>
+    <button (click)="deconnection()">Se déconnecter</button>
+</div>

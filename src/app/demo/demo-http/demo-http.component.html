@@ -1,0 +1,9 @@
+<div id="content">
+    <ul *ngIf="users.length !== 0">
+        <li *ngFor="let user of users">
+            {{user.name}}
+        </li>
+    </ul>
+    <button (click)="addUser()">Send</button>
+    <p *ngIf="loading">Loading ...</p>
+</div>
